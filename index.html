@@ -1,21 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stop Watch</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-</head>
-<body>
-    <div class="container">
-        <div class="clock">
-            <span id="hrs">00</span>
-            <span>:</span>
-            <span id="min">00</span>
-            <span>:</span>
-            <span id="sec">00</span>
-        </div>
+    
+  </head>
+  <body
+    class="bg-[url('./img1.avif')] bg-cover w-full h-screen flex items-center justify-center"
+  >
+    <div class="h-60 w-96 border-2 border-orange-700 rounded-md flex flex-col gap-4 items-center justify-center shadow-xl">
+      <p class="text-4xl text-gray-200">Stop - Watch</p>
+      <p id="time" class="text-2xl text-gray-200">00:00:00</p>
+      <div class="flex gap-3 text-xl text-white">
+        <button
+          id="start"
+          class="px-3 py-1 bg-gray-500 border-2 border-black rounded-md outline-none"
+          onclick="startStopWatch()"
+        >
+          Start
+        </button>
+        <button
+          id="stop"
+          class="px-3 py-1 bg-gray-500 border-2 border-black rounded-md outline-none"
+          onclick="stopStopWatch()"
+        >
+          Stop
+        </button>
+        <button
+          id="reset"
+          class="px-3 py-1 bg-gray-500 border-2 border-black rounded-md outline-none"
+          onclick="resetStopWatch()"
+        >
+          Reset
+        </button>
+      </div>
     </div>
-</body>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js"></script>
+  </body>
 </html>
